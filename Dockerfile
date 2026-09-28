@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 
-ARG BASEIMAGE=gcr.io/distroless/static-debian12@sha256:cba10d7abd3e203428e86f5b2d7fd5eb7d8987c387864ae4996cf97191b33764
+ARG BASEIMAGE=gcr.io/distroless/static-debian13@sha256:58133991db06659feaabe0f4e97a35cebf15ef4ea08f8a4c6d2ee5f75e4aa6a0
 
-FROM --platform=${BUILDPLATFORM} golang:1.26.2@sha256:5f3787b7f902c07c7ec4f3aa91a301a3eda8133aa32661a3b3a3a86ab3a68a36 AS builder
+FROM --platform=${BUILDPLATFORM} golang:1.26.3@sha256:2d6c80227255c3112a4d08e67ba98e58efd3846daf15d9d7d4c389565d881b1a AS builder
 
 COPY . /src
 WORKDIR /src
